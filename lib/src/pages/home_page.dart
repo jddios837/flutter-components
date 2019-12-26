@@ -1,8 +1,8 @@
-import 'package:components/src/alert_page.dart';
-import 'package:components/utils/icon_string_util.dart';
+import 'package:components/src/pages/alert_page.dart';
+import 'package:components/src/utils/icon_string_util.dart';
 import 'package:flutter/material.dart';
 
-import 'package:components/providers/menu_provider.dart';
+import 'package:components/src/providers/menu_provider.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -43,11 +43,14 @@ class HomePage extends StatelessWidget {
         trailing: Icon( Icons.keyboard_arrow_right, color: Colors.blue ),
         onTap: () {
           
-          final route = MaterialPageRoute(
-            builder: ( context ) => AlertPage()
-          );
+          Navigator.pushNamed(context, opt['ruta']);
 
-          Navigator.push(context, route);
+          // manera de manejar rutas 
+          // final route = MaterialPageRoute(
+          //   builder: ( context ) => AlertPage()
+          // );
+
+          // Navigator.push(context, route);
         },
       );
 
